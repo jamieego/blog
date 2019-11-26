@@ -28,7 +28,7 @@
 			</div>
 				<!--导航条></!-->
 				<ol class="breadcrumb">
-				  <li><a href="index.php">首页</a></li>
+				  <li><a href="index.php">返回首页</a></li>
 				  <li><?php echo $blog['title'];?></li>
 				</ol>
 			<div class="col-md-3">
