@@ -10,7 +10,7 @@
 			/*文件所处服务器的目录*/
 			$pathName=$dir . $file['name'];
 			/*文件所在服务器的网址*/
-			$urlName='http://blog.com/blog/upfiles' . $file['name'];
+			$urlName='http://127.0.0.1/blog/upfiles' . $file['name'];
 			$is=move_uploaded_file($file['tmp_name'], $pathName);
 			/*判断是否移动成功*/
 			if(!$is){
