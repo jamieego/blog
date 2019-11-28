@@ -1,0 +1,59 @@
+-- ----------------------------
+-- Table structure for admin用户表
+-- ----------------------------
+DROP TABLE IF EXISTS admin;
+CREATE TABLE admin (
+  aid int(10) NOT NULL,
+  ausername varchar(20) NOT NULL,
+  apassword varchar(20) NOT NULL,
+  PRIMARY KEY (aid)
+)
+-- ----------------------------
+-- Records of admin
+-- ----------------------------
+INSERT INTO admin VALUES ('1', 'aaa', '111');
+INSERT INTO admin VALUES ('0', 'hh', '123456');
+
+
+
+
+-- ----------------------------
+-- Table structure for page阅读表
+-- ----------------------------
+DROP TABLE IF EXISTS page;
+CREATE TABLE page (
+  pid int(10) NOT NULL,
+  title varchar(20) NOT NULL,
+  content text NOT NULL,
+  author varchar(10) NOT NULL,
+  intime date DEFAULT NULL,
+  uptime date DEFAULT NULL,
+  PRIMARY KEY (pid)
+)
+-- ----------------------------
+-- Records of page
+-- ----------------------------
+INSERT INTO page VALUES ('1', '美游轮爆发诺如病毒', '海外网11月25日电日前，美国一艘名为“诺唯真喜悦号”的游轮在航行中爆发诺如病毒疫情。据悉，该游轮从佛罗里达州出发，在经过16天的航行之后抵达洛杉矶港。船上数百名乘客在游轮入港之后纷纷逃散。\r\n\r\n据英国《镜报》报道，在洛杉矶消防局医护人员的指挥疏散下，寻求医疗救助的乘客已接受检查和救治。其中，部分患病乘客在下船后已经被隔离。一位游轮乘客在社交媒体上表示：“赶快离开‘诺唯真喜悦号’。我们的游轮在过去几天内爆发了诺如病毒，但我们都没有想到疫情如此严重。”此外，这位乘客还提到船上可能已有上百名患者。\r\n\r\n洛杉矶消防局发布的官方声明表示，工作人员会继续对“数名患者”进行检查，但并没有人出现生命危险。\r\n\r\n官方数据显示，“诺唯真喜悦”号建造于2017年，共能搭载3804名乘客和1821名船员。游轮公司官方尚未对此事件发表正式回应。\r\n\r\n诺如病毒的传染性较强，可造成急性胃肠炎并导致严重腹泻症状。该病毒传播途径极多且没有疫苗和特效药物，公众应在日常生活中注意个人卫生，保持健康生活习惯。', 'dhh', '0000-00-00', '0000-00-00');
+INSERT INTO page VALUES ('0', 'baba的页面', '什么都没有', '是我', '0000-00-00', '0000-00-00');
+INSERT INTO page VALUES ('2', '显示HTML的版权符号\r\n', '最近有小伙伴问©符号在页面显示很小，于是去查看他的源代码\r\n\r\n　　他在HTML代码里对应输入&copy; 那么在页面里应该会正常显示版权符号，可是为什么会出现这种问题呢？\r\n\r\n　　首先我想到页面在设计的时候，用的字体是宋体，就算没有设置字体，中文系统下默认用的还是宋体，那么这就有可能导致的显示出来的版权符号变形。\r\n\r\n　　后来试验了一下，真是字体影响了版权符号显示。\r\n\r\n \r\n\r\n     解决办法： 把字体设置为arial，就可以正常显示\r\n\r\n　  代码：& copy  2016 ', 'dhh02', null, null);
+
+
+
+
+-- ----------------------------
+-- Table structure for setting配置表
+-- ----------------------------
+DROP TABLE IF EXISTS setting;
+CREATE TABLE setting (
+  sid int(10) NOT NULL,
+  cnname varchar(20) NOT NULL,
+  key varchar(10) DEFAULT NULL,
+  val varchar(10) DEFAULT NULL,
+  PRIMARY KEY (sid)
+)
+-- ----------------------------
+-- Records of setting
+-- ----------------------------
+INSERT INTO setting VALUES ('1', '标题', 'title', '这是icon');
+INSERT INTO setting VALUES ('2', '简介', 'intro', '这是简介');
+INSERT INTO setting VALUES ('3', '分页', 'pagenum', '10');
