@@ -1,7 +1,6 @@
 -- ----------------------------
 -- Table structure for admin用户表
 -- ----------------------------
-DROP TABLE IF EXISTS admin;
 CREATE TABLE admin (
   aid int(10) NOT NULL,
   ausername varchar(20) NOT NULL,
@@ -20,7 +19,6 @@ INSERT INTO admin VALUES ('0', 'hh', '123456');
 -- ----------------------------
 -- Table structure for page阅读表
 -- ----------------------------
-DROP TABLE IF EXISTS page;
 CREATE TABLE page (
   pid int(10) NOT NULL,
   title varchar(20) NOT NULL,
@@ -43,7 +41,6 @@ INSERT INTO page VALUES ('2', '显示HTML的版权符号\r\n', '最近有小伙�
 -- ----------------------------
 -- Table structure for setting配置表
 -- ----------------------------
-DROP TABLE IF EXISTS setting;
 CREATE TABLE setting (
   sid int(10) NOT NULL,
   cnname varchar(20) NOT NULL,
