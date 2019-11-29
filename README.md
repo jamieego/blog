@@ -6,4 +6,4 @@ core is 数据库配置文件夹；
 theme is 页面设计文件夹。
 
 
-## index.php 为前台入口
+index.php 为前台入口
